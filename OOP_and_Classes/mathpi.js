@@ -21,6 +21,9 @@ Object.defineProperty(chai,'name',{
 console.log(Object.getOwnPropertyDescriptor(chai, "name"));
 
 for (const [key,value] of Object.entries(chai)) {
-    console.log(`${key}: ${value}`)
     
+    if (typeof value !=='function') {
+        console.log(`${key}: ${value}`);
+
+    }
 }
